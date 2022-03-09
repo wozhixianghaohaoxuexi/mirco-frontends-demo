@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
 	// css: {
 	// 	loaderOptions: {
@@ -6,10 +8,14 @@ module.exports = {
 	// 		}
 	// 	}
 	// },
+	devServer: {
+		port: 8080
+	},
 	configureWebpack: {
 		resolve: {
 			extensions: ['.js', '.vue', '.json'],
 			alias: {
+				'@': path.resolve(__dirname, 'src'),
 				'components': '@/components',
 			}
 		},

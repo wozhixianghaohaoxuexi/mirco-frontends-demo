@@ -6,7 +6,6 @@
         class="el-menu-vertical-demo"
         background-color="pink"
         :router="true"
-        @select="handleSelect"
       >
         <!-- <el-submenu index="1">
           <template slot="title">
@@ -18,12 +17,16 @@
             <template slot="title">选项4</template>
             <el-menu-item index="1-4-1">选项1</el-menu-item>
           </el-submenu>
-        </el-submenu> -->
-        <el-menu-item index="1" :route="{path: '/mircoVue3'}">
+        </el-submenu>-->
+        <el-menu-item index="0" :route="{ path: '/' }">
+          <i class="el-icon-menu"></i>
+          <span slot="title">MainApp</span>
+        </el-menu-item>
+        <el-menu-item index="1" :route="{ path: '/mircoVue3' }">
           <i class="el-icon-menu"></i>
           <span slot="title">Vue3App</span>
         </el-menu-item>
-        <el-menu-item index="2"  :route="{path: '/mircoVue3Ts'}">
+        <el-menu-item index="2" :route="{ path: '/mircoVue3Ts' }">
           <i class="el-icon-menu"></i>
           <span slot="title">Vue3TSApp</span>
         </el-menu-item>
@@ -32,7 +35,13 @@
     <el-container>
       <el-header class="header" height="60px">顶栏</el-header>
       <el-main class="main">
-        <router-view v-if="$route.name"></router-view>
+        <section v-if="$route.name">
+          <div>main</div>
+          <router-link to="/">Home</router-link>|
+          <router-link to="/about">About</router-link>
+
+          <router-view></router-view>
+        </section>
         <section v-else id="container"></section>
       </el-main>
     </el-container>
@@ -42,10 +51,6 @@
 <script>
 export default {
   methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
-      console.log(this.$route)
-    }
   },
 };
 </script>

@@ -5,8 +5,17 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: () => import('@/pages/Home/Home.vue')
+    redirect: '/home'
+  },
+  {
+    path: '/home',
+    name: 'home',
+    component: () => import('@/pages/home/Home.vue')
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import('@/pages/about/About.vue')
   }
 ]
 const router = new VueRouter({

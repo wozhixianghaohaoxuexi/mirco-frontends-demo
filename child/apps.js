@@ -6,12 +6,12 @@ const apps = [
     container: '#container',
     activeRule: '/mircoVue3',
   },
-  // {
-  //   name: 'Vue3TSApp',
-  //   entry: '//localhost:3001',
-  //   container: '#container',
-  //   activeRule: '/Vue3TSApp',
-  // }
+  {
+    name: 'mircoVue3TS',
+    entry: '//localhost:3001',
+    container: '#container',
+    activeRule: '/mircoVue3TS',
+  }
 ];
 
 export default apps

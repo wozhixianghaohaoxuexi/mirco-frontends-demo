@@ -1,4 +1,8 @@
+import Home from '@/pages/home/Home.vue'
+import About from '@/pages/about/About.vue'
+
 const routes = [
+  // umd 打包不支持路由懒加载
   {
     path: '/',
     redirect: '/home'
@@ -6,12 +10,12 @@ const routes = [
   {
     path: '/home',
     name: 'home',
-    component: () => import('@/pages/home/Home.vue')
+    component: Home
   },
   {
     path: '/about',
     name: 'about',
-    component: () => import('@/pages/about/About.vue')
+    component: About
   }
 ]
 
