@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "install:vue3": "cd child/mirco-vue3 && cnpm install",
+    "install:vue3-ts": "cd child/mirco-vue3-ts && npm install",
+    "install:main": "npm install",
+    "install-all": "npm-run-all install:*",
     "start:vue3": "cd child/mirco-vue3 && npm run serve",
     "start:vue3-ts": "cd child/mirco-vue3-ts && npm run serve-qiankun",
     "start:main": "npm run serve",
