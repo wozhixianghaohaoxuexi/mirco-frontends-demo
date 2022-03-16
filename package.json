@@ -9,12 +9,12 @@
     "install-all": "npm-run-all install:*",
     "start:vue3": "cd child/mirco-vue3 && npm run serve",
     "start:vue3-ts": "cd child/mirco-vue3-ts && npm run serve-qiankun",
-    "start:main": "npm run serve",
+    "start:main": "vue-cli-service serve",
     "start-all": "npm-run-all --parallel start:*",
     "serve-all": "npm-run-all --parallel start:*",
     "build:vue3": "cd child/mirco-vue3 && npm run build",
     "build:vue3-ts": "cd child/mirco-vue3-ts && npm run build",
-    "build:main": "npm run build",
+    "build:main": "vue-cli-service build",
     "build-all": "npm-run-all --parallel build:*"
   },
   "dependencies": {
